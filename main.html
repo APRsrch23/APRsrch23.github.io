@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<HTML>
+<script>
+    var times = [0];
+    var lastTime = 0
+    function timerInit() {
+        let date = Date.now();
+        times.push(date - lastTime);
+        lastTime = date;
+        document.getElementById("timer-display").innerHTML = times[times.length - 1] +  " milliseconds"
+    }
+</script>
+
+<body>
+    <h1>Click the button :smil:</h1>
+    <button id="button" onclick = timerInit()>Start</button>
+    <p id = "timer-display"></p>
+</body>
+
+</HTML>
