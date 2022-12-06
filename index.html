@@ -16,7 +16,7 @@
         width: 200px;
         border: 0px;
         font-family: 'Courier New', Courier, monospace;
-        font-size:25px;
+        font-size: 25px;
         color: white;
     }
 
@@ -35,12 +35,20 @@
         lastTime = date;
         clickCount > 1 ? document.getElementById("timer-display").innerHTML = times[times.length - 1] + " milliseconds" : document.getElementById("timer-display").innerHTML = "Click again!!!!!!!!!!!"
     }
+
+    var clickTrack = document.getElementById("clickTrack");
+
+    function playAudio() {
+        clickTrack.play();
+    }
+
 </script>
 
 <body>
     <h1 style="text-align:center">Click the button :smil:</h1>
     <button class="buttonSwag shadow center" id="button" onclick=timerInit()>Start</button>
     <p id="timer-display" style="text-align:center"></p>
+    <audio hidden preload="auto" id="clickTrack" src="click track.ogg"></audio>
 </body>
 
 </HTML>
