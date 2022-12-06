@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <HTML>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
 <style>
     .center {
         margin: auto;
@@ -48,7 +52,9 @@
     <h1 style="text-align:center">Click the button :smil:</h1>
     <button class="buttonSwag shadow center" id="button" onclick=timerInit()>Start</button>
     <p id="timer-display" style="text-align:center"></p>
-    <audio hidden preload="auto" id="clickTrack" src="click track.ogg"></audio>
+    <audio hidden preload="auto" id="clickTrack">
+        <source src="click track.ogg" type="audio/ogg">
+    </audio>
 </body>
 
 </HTML>
