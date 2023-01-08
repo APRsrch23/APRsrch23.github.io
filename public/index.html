@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+</head>
+<!--
+    <style>
+    .center {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    }
+
+    .buttonSwag {
+        border-radius: 50%;
+        background-color: #0078d7;
+        display: block;
+        height: 200px;
+        width: 200px;
+        border: 0px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        color: white;
+    }
+
+    .shadow {
+        box-shadow: inset 0 0 5px #394D5E;
+    }
+</style>
+-->
+<script>
+    var clickTrack = document.getElementById("clickTrack");
+
+    function playAudio() {
+        clickTrack.play();
+    }
+</script>
+
+<body>
+    <h1 style="text-align:center">Click the button :smil:</h1>
+    <button class="buttonSwag shadow center" id="tappingButton">Start</button>
+    <p id="timerDisplay" style="text-align:center"></p>
+    <audio preload="auto" id="clickTrack">
+        <source src="\click track.ogg" type="audio/ogg">
+    </audio>
+    <form id="nameSubmissionForm">
+        <label for="name">Full name, (First & Last)</label><br>
+        <input type="text" id="name" name="name" value=""><br>
+        <button disabled class="submitButton" type="submit" id="submit">Submit</button>
+    </form>
+    <p id="tappingArray">hi</p>
+</body>
+
+
+<!-- This script is created by webpack -->
+<!-- IT WAS NOT YOU LIARS I SPENT OVER AN HOUR WONDERING WHAT WAS WRONG-->
+<script type="module" src="scripts/main.js"></script>
+
+</HTML>

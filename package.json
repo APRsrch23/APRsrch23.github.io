@@ -1,0 +1,28 @@
+{
+  "name": "apresearch-thing",
+  "version": "1.0.0",
+  "description": "sensorimotor synchronization observational study",
+  "dependencies": {
+    "firebase": "^9.15.0",
+    "webpack": "^5.75.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch --progress",
+    "visualize-bundle": "webpack --analyze"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/APRsrch23/APRsrch23.github.io.git"
+  },
+  "author": "Anonymous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/APRsrch23/APRsrch23.github.io/issues"
+  },
+  "homepage": "https://github.com/APRsrch23/APRsrch23.github.io#readme",
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
