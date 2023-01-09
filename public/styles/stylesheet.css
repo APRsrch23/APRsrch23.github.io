@@ -1,32 +1,71 @@
-/*WHY ISNT IT WORLKINGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
-.center {
+/*
+css is really hard wow
+*/
+body {
+    --dbg: #d0d0d0;
+    --bg: #eeeeee;
+    --ebg: #d5d5d5;
+    --mbg: #e5e5e5;
+    --text: #000000;
+    --etext: #222222;
+    --blue: #3f96e6;
+    --red: #f03e2d;
+    --warning: #ffca00;
+    --error: #ee0000;
+    --trans: cubic-bezier(0.58, 0.11, 0.51, 0.97);
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    transition: background-color 0.3s var(--trans), color 0.3s var(--trans);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions {
+    color: var(--etext);
+    font-size: 25px
+}
+
+form.nameForm {
+    position : absolute;
+    left: 50%
+}
+
+.centered {
     margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+    left: 50%;
 }
 
 .buttonSwag {
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 50%;
-    background-color: #0078d7;
+    background-color: #0077dd;
     display: block;
-    height: 200px;
-    width: 200px;
-    border: 0px;
-    font-family: 'Courier New', Courier, monospace;
+    height: 250px;
+    width: 250px;
+    border: 10px;
+    border-color:#003877;
+    font-family: Tahoma;
     font-size: 25px;
-    color: white;
+    color: #eeeeee;
+    transition: color 2s, filter 0.25s
+}
+
+.buttonActive {
+    color: #0078d7
 }
 
 .buttonSwag:active {
-    background-color: #0058a0;
-}
-
-.shadow {
-    box-shadow: inset 0 0 5px #394D5E;
+    transition: filter 0s;
+    filter:brightness(75%);
 }
 
 .submitButton {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Tahoma;
 }

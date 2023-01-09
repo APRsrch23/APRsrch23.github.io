@@ -22,17 +22,21 @@ import {
 import { getFirebaseConfig } from './firebase-config.js';
 
 //------------------THE BUTTON PART-------------
-
 var timesRelative = [];
 var timesAbsolute = [];
 var clickCount = 0;
 var lastTime = 0;
 var initialTime = 0;
+
 function timerUpdate() {
   let date = Date.now();
   if (!clickCount) {//First click actions
     initialTime = date;
-    //tappingButtonInput.innerHTML = "";
+    playAudio();
+    tappingButtonInput.className = "buttonSwag shadow centered buttonActive";
+  }
+  if(date - initialTime >= 60000) {
+    tappingButtonInput.setAttribute('disabled', true);
   }
   clickCount++
   timesRelative.push(date - lastTime); // milliseconds since last tap
@@ -47,7 +51,7 @@ function timerUpdate() {
 //-----------------------------------------------
 
 function toggleButton() {
-  if (nameTextInput.value && timesAbsolute.length) {
+  if (nameTextInput.value && timesAbsolute.length && initialTime && Date.now() - initialTime >= 60000) {
     nameSubmissionInput.removeAttribute('disabled');
   } else {
     nameSubmissionInput.setAttribute('disabled', 'true');
@@ -88,6 +92,10 @@ async function saveTappingData() {
   };
 };
 
+function playAudio() {
+  clickTrack.play();
+}
+
 //shortcut to the elements I need
 var nameFormElement = document.getElementById("nameSubmissionForm")
 var nameTextInput = document.getElementById("name");
@@ -95,12 +103,13 @@ var nameSubmissionInput = document.getElementById("submit")
 var tappingDataArrayElement = document.getElementById("tappingArray")
 var timerDisplay = document.getElementById("timerDisplay")
 var tappingButtonInput = document.getElementById("tappingButton")
+var clickTrack = document.getElementById("clickTrack")
 
 //save tapping data on form submit
 nameFormElement.addEventListener('submit', onNameFormSubmit);
 nameTextInput.addEventListener('keyup', toggleButton);
 nameTextInput.addEventListener('change', toggleButton)
-tappingButtonInput.addEventListener('click', timerUpdate)
+tappingButtonInput.addEventListener('click', timerUpdate);
 
 const firebaseAppConfig = getFirebaseConfig();
 initializeApp(firebaseAppConfig);

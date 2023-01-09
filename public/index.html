@@ -30,32 +30,34 @@
     }
 </style>
 -->
-<script>
-    var clickTrack = document.getElementById("clickTrack");
-
-    function playAudio() {
-        clickTrack.play();
-    }
-</script>
 
 <body>
-    <h1 style="text-align:center">Click the button :smil:</h1>
-    <button class="buttonSwag shadow center" id="tappingButton">Start</button>
+    <div>
+        <h1 style="text-align:center">Sensorimotor Synchronization</h1>
+    </div>
+    <div class = "instructions centered">
+        <ul">
+            <li>Press the button using the touchscreen to start</li>
+            <li>Try to synchronize with the clicks and keep going for the whole duration of the click track</li>
+            <li><strong>Make sure you have wired earbuds in!</strong></li>
+            <li></li>
+        </ul>
+    </div>
+    <button class="buttonSwag centered" id="tappingButton">Start</button>
     <p id="timerDisplay" style="text-align:center"></p>
     <audio preload="auto" id="clickTrack">
-        <source src="\click track.ogg" type="audio/ogg">
+        <source src="sounds/45830fbb50d82bf568e240adaae93f57.ogg">
     </audio>
-    <form id="nameSubmissionForm">
+    <form class="centered" id="nameSubmissionForm">
         <label for="name">Full name, (First & Last)</label><br>
         <input type="text" id="name" name="name" value=""><br>
         <button disabled class="submitButton" type="submit" id="submit">Submit</button>
     </form>
-    <p id="tappingArray">hi</p>
+    <p id="tappingArray"></p>
 </body>
 
 
-<!-- This script is created by webpack -->
-<!-- IT WAS NOT YOU LIARS I SPENT OVER AN HOUR WONDERING WHAT WAS WRONG-->
+<!-- This script was supposed to have been created by webpack -->
 <script type="module" src="scripts/main.js"></script>
 
 </HTML>
