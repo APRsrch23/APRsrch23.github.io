@@ -70,7 +70,8 @@ function onNameFormSubmit(e) {
   e.preventDefault();//stops it from clearing the text box i think
   saveTappingData();
   tappingButtonInput.setAttribute('disabled', true);
-  nameSubmissionInput.setAttribute('disabled', true)
+  nameSubmissionInput.setAttribute('disabled', true);
+  displayCompletionMessage();
 };
 
 //saves tap data to the database (is it the Cloud Firestore? Is is the Realtime Database? Who knows????)
@@ -96,6 +97,12 @@ function playAudio() {
   clickTrack.play();
 }
 
+
+function displayCompletionMessage() {
+  completionMessage.className = "completionMessageHidden completionMessageRevealed centered";
+  completionMessage.innerText = "Thank you for participating!"
+}
+
 //shortcut to the elements I need
 var nameFormElement = document.getElementById("nameSubmissionForm")
 var nameTextInput = document.getElementById("name");
@@ -104,6 +111,7 @@ var tappingDataArrayElement = document.getElementById("tappingArray")
 var timerDisplay = document.getElementById("timerDisplay")
 var tappingButtonInput = document.getElementById("tappingButton")
 var clickTrack = document.getElementById("clickTrack")
+var completionMessage = document.getElementById("completionMessageHidden");
 
 //save tapping data on form submit
 nameFormElement.addEventListener('submit', onNameFormSubmit);

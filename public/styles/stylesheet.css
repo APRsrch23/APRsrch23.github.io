@@ -27,11 +27,25 @@ body {
     flex-direction: column;
 }
 
+.completionMessageHidden {
+    color: #eeeeee;
+    transition: color 5s;
+    transition-timing-function: ease-in-out;
+}
+
+.completionMessageRevealed {
+    color: #222222;
+    transition: color 5s;
+    transition-timing-function: ease-in-out;
+}
+
 .instructions {
     color: var(--etext);
     font-size: 25px
 }
-
+.header {
+    font-size:48px
+}
 form.nameForm {
     position : absolute;
     left: 50%

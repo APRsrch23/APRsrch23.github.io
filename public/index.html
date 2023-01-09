@@ -32,7 +32,7 @@
 -->
 
 <body>
-    <div>
+    <div class="header centered">
         <h1 style="text-align:center">Sensorimotor Synchronization</h1>
     </div>
     <div class = "instructions centered">
@@ -40,11 +40,13 @@
             <li>Press the button using the touchscreen to start</li>
             <li>Try to synchronize with the clicks and keep going for the whole duration of the click track</li>
             <li><strong>Make sure you have wired earbuds in!</strong></li>
-            <li></li>
+            <li>Once you're done put your name in the text box and press submit.</li>
         </ul>
     </div>
     <button class="buttonSwag centered" id="tappingButton">Start</button>
-    <p id="timerDisplay" style="text-align:center"></p>
+    <!--
+        <p id="timerDisplay" style="text-align:center"></p>
+    -->
     <audio preload="auto" id="clickTrack">
         <source src="sounds/45830fbb50d82bf568e240adaae93f57.ogg">
     </audio>
@@ -53,7 +55,12 @@
         <input type="text" id="name" name="name" value=""><br>
         <button disabled class="submitButton" type="submit" id="submit">Submit</button>
     </form>
-    <p id="tappingArray"></p>
+    <div class="centered">
+        <p id="completionMessageHidden"></p>
+    </div>
+    <!--
+        <p id="tappingArray"></p>
+    -->
 </body>
 
 
