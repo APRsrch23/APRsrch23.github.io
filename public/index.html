@@ -55,16 +55,22 @@
     </audio>
 
     <div class="centered">
-        <p>Please enter the number of hours that you slept last night</p>
+        <p>Please enter, to the best of your knowledge, the number of hours that you slept last night</p>
     </div>
 
     <div>
-        <form class="centered" id="nameSubmissionForm">
-            <label for="sleepValue">Hours of sleep last night:</label>
-            <input type="number" id="sleepValue" name="sleep" value="sleepValue" min="0" max="24">
-            <label for="name">Full name (First & Last)</label><br>
-            <input type="text" id="name" name="name" value=""><br>
-            <button disabled class="submitButton" type="submit" id="submit">Submit</button>
+        <form class="centered nameForm" id="nameSubmissionForm">
+            <div>
+                <label for="sleepValue">Hours of sleep last night:</label>
+                <input type="number" id="sleepValue" name="sleep" value="sleepValue" min="0" max="24">
+            </div>
+            <div>
+                <label for="name">Full name (First & Last)</label><br>
+                <input type="text" id="name" name="name" value=""><br>
+            </div>
+            <div>
+                <button disabled class="submitButton" type="submit" id="submit">Submit</button>
+            </div>
         </form>
     </div>
 

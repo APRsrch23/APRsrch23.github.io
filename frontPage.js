@@ -3,6 +3,7 @@
 var hasSamplePlayed = false;
 
 function playSampleAudio() {
+    console.log('playing audio!');
     hasSamplePlayed = true;
     if (sampleAudio.paused) return;
     sampleAudio.play();
@@ -28,7 +29,7 @@ audibleCheckbox.addEventListener('change', function () {
         continueLink.setAttribute('href', './public/index.html');
         continueLink.classList.add('visible');
     } else {
-        continueLink.removeAttribute('href');
+        continueLink.setAttribute('href', '');
         if(continueLink.classList.contains('visible')) continueLink.classList.remove('visible');
         if(!continueLink.classList.contains('hidden')) continueLink.classList.add('hidden');
     }
