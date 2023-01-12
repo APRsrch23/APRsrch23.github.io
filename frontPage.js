@@ -25,7 +25,7 @@ sampleButton.addEventListener('click', playSampleAudio())
 audibleCheckbox.addEventListener('change', function () {
     if(this.checked && hasSamplePlayed) {
         continueLink.setAttribute('href', './public/index.html');
-        continueLink.classname = "visible";
+        continueLink.setAttribute('class', 'visible'); 
     } else {
         continueLink.removeAttribute('href');
         continueLink.remove('class');

@@ -7,7 +7,7 @@
 
 <body>
     <audio preload="auto" id="sampleClickTrack">
-        <source src="./public/sounds/45830fbb50d82bf568e240adaae93f57.ogg">
+        <source src="clicktrack.ogg">
     </audio>
     <div class="instructionsFrontPage">
         <div>
@@ -33,16 +33,15 @@
 
     <div>
         <form>
-            <label for="audibleCheck"></label>
+            <label for="audibleCheck" valie="Check if you could clearly hear the audio"></label>
             <input type="checkbox" name="audibleCheck" id="audibleCheck">
         </form>
     </div>
 
-    <div class="hidden">
-        <a id="continueLink" href="./public/index.html">Click here to continue to the study</a>
+    <div>
+        <a class = "hidden" id="continueLink" href="./public/index.html">Click here to continue to the study</a>
     </div>
 
 </body>
-<script type="module" src="frontPage.js"></script>
-
+    <script type="module" src="frontPage.js"></script>
 </HTML>
