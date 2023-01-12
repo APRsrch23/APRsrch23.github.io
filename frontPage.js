@@ -10,10 +10,11 @@ function playSampleAudio() {
         sampleAudio.pause();
         sampleAudio.currentTime = 0;
     }, 3400);
-    if (!continueLink.className) {
+    /*if (continueLink.classList.contains('hidden')) {
         continueLink.setAttribute('href', './public/index.html');
-        continueLink.classname = "visible";
-    }
+        continueLink.classList.remove('hidden');
+        continueLink.classList.add('visible');
+    }*/
 }
 
 var sampleAudio = document.getElementById("sampleClickTrack");
@@ -23,12 +24,13 @@ var audibleCheckbox = document.getElementById("audibleCheck");
 
 sampleButton.addEventListener('click', playSampleAudio())
 audibleCheckbox.addEventListener('change', function () {
-    if(this.checked && hasSamplePlayed) {
+    if(this.checked && hasSamplePlayed == true) {
         continueLink.setAttribute('href', './public/index.html');
-        continueLink.setAttribute('class', 'visible'); 
+        continueLink.classList.add('visible');
     } else {
         continueLink.removeAttribute('href');
-        continueLink.remove('class');
+        if(continueLink.classList.contains('visible')) continueLink.classList.remove('visible');
+        if(!continueLink.classList.contains('hidden')) continueLink.classList.add('hidden');
     }
 }
 )
