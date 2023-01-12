@@ -74,6 +74,10 @@ function onNameFormSubmit(e) {
   displayCompletionMessage();
 };
 
+function collectSleepHoursData() {
+  return sleepHoursNumber.value;
+};
+
 //saves tap data to the database (is it the Cloud Firestore? Is is the Realtime Database? Who knows????)
 async function saveTappingData() {
 
@@ -84,6 +88,7 @@ async function saveTappingData() {
     //AddDoc is adding the object starting with the yellow curly braces to the 
     await addDoc(collection(getFirestore(), 'sensorimotor'), {
       name: getName(),
+      sleepHours: collectSleepHoursData(),
       tapsData: collectTappingData(),
       timestamp: serverTimestamp() //to ensure duplicates don't happen
     });
@@ -112,6 +117,7 @@ var timerDisplay = document.getElementById("timerDisplay")
 var tappingButtonInput = document.getElementById("tappingButton")
 var clickTrack = document.getElementById("clickTrack")
 var completionMessage = document.getElementById("completionMessageHidden");
+var sleepHoursNumber = document.getElementById("sleepValue");
 
 //save tapping data on form submit
 nameFormElement.addEventListener('submit', onNameFormSubmit);
@@ -121,3 +127,13 @@ tappingButtonInput.addEventListener('click', timerUpdate);
 
 const firebaseAppConfig = getFirebaseConfig();
 initializeApp(firebaseAppConfig);
+
+/*
+  TODO: main mage
+  tapping the screen on blue button
+  blue button will start
+  give sample button
+  very specific instructions
+  goal to tap screen @ same time as the click for the duration of the click track
+  keep abridged version
+*/

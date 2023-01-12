@@ -27,6 +27,16 @@ body {
     flex-direction: column;
 }
 
+.hidden {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
 .completionMessageHidden {
     color: #eeeeee;
     transition: color 5s;
@@ -43,11 +53,13 @@ body {
     color: var(--etext);
     font-size: 25px
 }
+
 .header {
-    font-size:48px
+    font-size: 24px
 }
+
 form.nameForm {
-    position : absolute;
+    position: absolute;
     left: 50%
 }
 
@@ -64,7 +76,7 @@ form.nameForm {
     height: 250px;
     width: 250px;
     border: 10px;
-    border-color:#003877;
+    border-color: #003877;
     font-family: Tahoma;
     font-size: 25px;
     color: #eeeeee;
@@ -77,7 +89,7 @@ form.nameForm {
 
 .buttonSwag:active {
     transition: filter 0s;
-    filter:brightness(75%);
+    filter: brightness(75%);
 }
 
 .submitButton {

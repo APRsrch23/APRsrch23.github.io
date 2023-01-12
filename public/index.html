@@ -35,26 +35,39 @@
     <div class="header centered">
         <h1 style="text-align:center">Sensorimotor Synchronization</h1>
     </div>
-    <div class = "instructions centered">
-        <ul">
+
+    <div class="instructions centered">
+        <ul>
             <li>Press the button using the touchscreen to start</li>
             <li>Try to synchronize with the clicks and keep going for the whole duration of the click track</li>
             <li><strong>Make sure you have wired earbuds in!</strong></li>
             <li>Once you're done put your name in the text box and press submit.</li>
         </ul>
     </div>
+
     <button class="buttonSwag centered" id="tappingButton">Start</button>
     <!--
         <p id="timerDisplay" style="text-align:center"></p>
     -->
-    <audio preload="auto" id="clickTrack">
+
+    <audio hidden preload="auto" id="clickTrack">
         <source src="sounds/45830fbb50d82bf568e240adaae93f57.ogg">
     </audio>
-    <form class="centered" id="nameSubmissionForm">
-        <label for="name">Full name, (First & Last)</label><br>
-        <input type="text" id="name" name="name" value=""><br>
-        <button disabled class="submitButton" type="submit" id="submit">Submit</button>
-    </form>
+
+    <div class="centered">
+        <p>Please enter the number of hours that you slept last night</p>
+    </div>
+
+    <div>
+        <form class="centered" id="nameSubmissionForm">
+            <label for="sleepValue">Hours of sleep last night:</label>
+            <input type="number" id="sleepValue" name="sleep" value="sleepValue" min="0" max="24">
+            <label for="name">Full name (First & Last)</label><br>
+            <input type="text" id="name" name="name" value=""><br>
+            <button disabled class="submitButton" type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
     <div class="centered">
         <p id="completionMessageHidden"></p>
     </div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <link rel="stylesheet" href="./public/styles/stylesheet.css">
+</head>
+
+<body>
+    <audio preload="auto" id="sampleClickTrack">
+        <source src="./public/sounds/45830fbb50d82bf568e240adaae93f57.ogg">
+    </audio>
+    <div class="instructionsFrontPage">
+        <div>
+            <p>Thanks for agreeing to participate in this study!</p>
+        </div>
+
+        <ul>
+            <li>You are going to complete a finger tapping task:</li>
+            <li>Press the blue button using the touchscreen</li>
+            <li>When you do that, a metronome will start playing</li>
+            <li>Your goal is to synchronize your taps with the metronome for as long as the metronome goes</li>
+            <li>Make sure you are using wired earbuds/headphones and that you can hear the metronome clearly</li>
+        </ul>
+    </div>
+
+    <div>
+        <p>Press this button to hear an excerpt of the metronome:</p>
+    </div>
+
+    <div>
+        <button id="sampleButton" class="buttonSwag centered">Start</button>
+    </div>
+
+    <div>
+        <form>
+            <label for="audibleCheck"></label>
+            <input type="checkbox" name="audibleCheck" id="audibleCheck">
+        </form>
+    </div>
+
+    <div class="hidden">
+        <a id="continueLink" href="./public/index.html">Click here to continue to the study</a>
+    </div>
+
+</body>
+<script type="module" src="frontPage.js"></script>
+
+</HTML>
