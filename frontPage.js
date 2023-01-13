@@ -5,7 +5,6 @@ var hasSamplePlayed = false;
 function playSampleAudio() {
     console.log('playing audio!');
     hasSamplePlayed = true;
-    if (sampleAudio.paused) return;
     sampleAudio.play();
     setTimeout(function () {
         sampleAudio.pause();

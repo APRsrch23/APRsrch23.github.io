@@ -42,7 +42,6 @@ function timerUpdate() {
   timesRelative.push(date - lastTime); // milliseconds since last tap
   timesAbsolute.push(date - initialTime); //milliseconds since initial tap
   lastTime = date;
-  clickCount > 1 ? timerDisplay.innerHTML = timesRelative[timesRelative.length - 1] + " milliseconds" : timerDisplay.innerHTML = "Click again!!!!!!!!!!!"
   tappingDataArrayElement.innerHTML = timesAbsolute;
   toggleButton();
 }
