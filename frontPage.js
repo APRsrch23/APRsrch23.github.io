@@ -23,15 +23,15 @@ var sampleButton = document.getElementById("sampleButton");
 var continueLink = document.getElementById("continueLink");
 var audibleCheckbox = document.getElementById("audibleCheck");
 
-sampleButton.addEventListener('click', playSampleAudio())
+sampleButton.addEventListener('click', function () { playSampleAudio() })
 audibleCheckbox.addEventListener('change', function () {
-    if(this.checked && hasSamplePlayed == true) {
+    if (this.checked && hasSamplePlayed == true) {
         continueLink.setAttribute('href', './public/index.html');
         continueLink.classList.add('visible');
     } else {
         continueLink.setAttribute('href', '');
-        if(continueLink.classList.contains('visible')) continueLink.classList.remove('visible');
-        if(!continueLink.classList.contains('hidden')) continueLink.classList.add('hidden');
+        if (continueLink.classList.contains('visible')) continueLink.classList.remove('visible');
+        if (!continueLink.classList.contains('hidden')) continueLink.classList.add('hidden');
     }
 }
 )
