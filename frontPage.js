@@ -5,6 +5,7 @@ var hasSamplePlayed = false;
 function playSampleAudio() {
     console.log('playing audio!');
     hasSamplePlayed = true;
+    audibleCheckbox.disabled=false;
     sampleAudio.play();
     setTimeout(function () {
         sampleAudio.pause();
