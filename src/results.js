@@ -1,5 +1,5 @@
 'use strict'
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
 import {
   getFirestore,
   collection,
@@ -13,13 +13,7 @@ import {
   doc,
   serverTimestamp,
 } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';
-import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from 'firebase/storage';
-import { getFirebaseConfig } from './firebase-config.js';
+import { getFirebaseConfig } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-config.js';
 const q = query(sensorimotor, orderBy("timestamp"), limit = (1000));
 var arraysOutput = []
 function calculateAverage(array) {
