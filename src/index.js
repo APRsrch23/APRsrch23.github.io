@@ -62,7 +62,7 @@ function collectTappingData() {
 }
 
 function getName() {
-  return nameTextInput.value
+  return nameTextInput.value.toString();
 }
 
 function onNameFormSubmit(e) {
@@ -85,7 +85,7 @@ async function saveTappingData() {
 
     //await means like "don't do anything else until this part is done" (await it).
     //AddDoc is adding the object starting with the yellow curly braces to the 
-    await addDoc(collection(getFirestore(), 'sensorimotor'), {
+    await addDoc(collection(getFirestore(), 'sensorimotor', getName()), {
       name: getName(),
       sleepHours: collectSleepHoursData(),
       tapsData: collectTappingData(),
