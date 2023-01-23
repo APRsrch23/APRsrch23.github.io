@@ -12,7 +12,7 @@ import {
   updateDoc,
   doc,
   serverTimestamp,
-} from 'firebase/firestore';
+} from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';
 import {
   getStorage,
   ref,
