@@ -1,4 +1,25 @@
-import { query, orderBy, limit } from "firebase/firestore";
+'use strict'
+import { initializeApp } from 'firebase/app';
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  orderBy,
+  limit,
+  onSnapshot,
+  setDoc,
+  updateDoc,
+  doc,
+  serverTimestamp,
+} from 'firebase/firestore';
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from 'firebase/storage';
+import { getFirebaseConfig } from './firebase-config.js';
 const q = query(sensorimotor, orderBy("timestamp"), limit = (1000));
 var arraysOutput = []
 function calculateAverage(array) {
@@ -27,3 +48,5 @@ for (var subject in q) {
 arraysElement.innerHTML = arraysOutput;
 
 var arraysElement = document.getElementById("arrays");
+const firebaseAppConfig = getFirebaseConfig();
+initializeApp(firebaseAppConfig);
