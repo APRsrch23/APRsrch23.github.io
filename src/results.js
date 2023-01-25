@@ -13,7 +13,7 @@ import {
   doc,
   serverTimestamp,
 } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';
-import { getFirebaseConfig } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-config.js';
+import { getFirebaseConfig } from ' /firebase-config.js';
 const q = query(sensorimotor, orderBy("timestamp"), limit = (1000));
 var arraysOutput = []
 function calculateAverage(array) {
