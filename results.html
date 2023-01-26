@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <p id = "arrays"></p>
-    </body>
-    <script type="module" src="./src/results.js"></script>
+
+<body>
+    <p id="arrays"></p>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js'
+        import {
+            getFirestore,
+            collection,
+            addDoc,
+            query,
+            orderBy,
+            limit,
+            onSnapshot,
+            setDoc,
+            updateDoc,
+            doc,
+            serverTimestamp,
+        } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
+    </script>
+</body>
+<script type="module" src="./src/results.js"></script>
+
 </html>
