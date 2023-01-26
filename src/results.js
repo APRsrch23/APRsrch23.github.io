@@ -1,6 +1,6 @@
 'use strict'
-/*import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';*/
-/*import {
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+import {
   getFirestore,
   collection,
   addDoc,
@@ -12,7 +12,7 @@
   updateDoc,
   doc,
   serverTimestamp,
-} from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';*/
+} from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';
 import { getFirebaseConfig } from './firebase-config.js';
 const q = query(sensorimotor, orderBy("timestamp"), limit = (1000));
 var arraysOutput = []
