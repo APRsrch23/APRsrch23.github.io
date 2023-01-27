@@ -14,7 +14,7 @@ import {
   serverTimestamp,
 } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';
 import { getFirebaseConfig } from './firebase-config.js';
-var q = query('sensorimotor', orderBy("timestamp"));
+var q = query('sensorimotor');
 var arraysOutput = []
 function calculateAverage(array) {
     var total = 0;
